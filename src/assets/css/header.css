@@ -1,0 +1,14 @@
+/* header {
+  z-index: 9000 !important;
+  background-color: black;
+  color: white !important;
+  top: 0;
+} */
+/* 
+header .navbar-brand img {
+  height: 100px;
+} */
+
+header nav ul {
+  list-style-type: none;
+} 

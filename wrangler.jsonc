@@ -1,0 +1,25 @@
+{
+  "name": "netflix-clone-react",
+  "compatibility_date": "2026-02-08",
+  "assets": {
+    "directory": "./"
+  },
+  "kv_namespaces": [
+    {
+      // the binding name used in your Worker code to refer to this KV namespace
+      // it must match the binding name in your Worker code, e.g. env.KV_CACHE
+      "binding": "KV_CACHE",
+      "id": "66cf67bc36794c9e88b3b724e4ee32ea"
+
+      // Optional: preview_id used when running `wrangler dev` for local dev
+      // "preview_id": "<ID_OF_PREVIEW_KV_NAMESPACE_FOR_LOCAL_DEVELOPMENT>",
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "D1_LOGS",
+      "database_name": "netflix-clone-d1",
+      "database_id": "ef7f72c5-4c36-4879-8f49-b0ee37f31967"
+    }
+  ]
+}

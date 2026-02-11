@@ -1,0 +1,52 @@
+.simple-slider {
+  position: relative;
+}
+
+.simple-slider  .cards {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  gap: .1rem;
+  /* allows the images to move out when scaled */
+  /* increase it if you want the images to not be cut out when scaled */
+  padding-block: 1rem;
+  padding-inline: 0.5rem;
+}
+
+/* each card/slide */
+.simple-slider  .cards > * {
+  margin-right: .2rem;
+}
+
+
+.simple-slider .buttons-hidden {
+  display: none;
+}
+
+.simple-slider  .buttons > * {
+  position: absolute;
+  width: min-content;
+  /* min-height: 100%; */
+  z-index: 5;
+  font-size: 3rem;
+  background-color: rgb(215, 215, 215);
+  opacity: 0.5;
+  cursor: pointer;
+  color: black;
+}
+
+.simple-slider  .buttons > .left {
+}
+
+.simple-slider  .cards img {
+  cursor: pointer;
+  transition: all ease-in 0.3s;
+  z-index: 10000;
+  height: 100%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.simple-slider  .cards img:hover {
+  transform: scale(1.1);
+}

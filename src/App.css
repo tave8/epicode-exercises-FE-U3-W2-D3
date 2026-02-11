@@ -1,0 +1,47 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+
+/* body {
+  background-color: black;
+  color: white;
+} */
+
+main {
+  /* push footer  */
+  /* flex-grow: 1; */
+}
+
+/* footer {
+  background-color: black;
+  color: white;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+footer .links {
+  text-transform: capitalize;
+}
+
+footer .links p {
+  margin-bottom: 0.7rem !important;
+}
+
+p {
+  margin: 0 !important;
+}
+
+main {
+  margin-top: 70px;
+}
+
+button:hover {
+  color: white !important;
+} */
