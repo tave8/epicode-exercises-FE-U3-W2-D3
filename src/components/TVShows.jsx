@@ -2,9 +2,13 @@ import { Container, Row, Col, Nav, Navbar, NavDropdown, Image, Dropdown } from "
 
 const TVShows = props => {
     return (
-        <>
-            <p>TV Shows</p>
-        </>
+        <Container>
+            <Row>
+                <Col>
+                    <p>Here you will find your preferred TV Shows.</p>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

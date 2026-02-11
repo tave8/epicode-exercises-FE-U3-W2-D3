@@ -31,7 +31,7 @@ class MyNav extends Component {
                 </Nav.Link>
               </Nav.Item>
 
-              <Link to="/tv-movies" className="nav-link text-white">
+              <Link to="/tv-shows" className="nav-link text-white">
                 TV Shows
               </Link>
 
