@@ -4,17 +4,24 @@ import { Container, Row, Col, Nav, Navbar, NavDropdown, Image, Button, ButtonGro
 import MyTitle from "./MyTitle"
 import MySettings from "./MySettings"
 
+import { Helmet } from "react-helmet"
+
 class SettingsMain extends Component {
   render() {
     return (
-      <Container fluid className="mt-3">
-        <Row className="justify-content-center">
-          <Col md={9}>
-            <MyTitle />
-            <MySettings />
-          </Col>
-        </Row>
-      </Container>
+      <>
+        <Helmet>
+          <title>Settings</title>
+        </Helmet>
+        <Container fluid className="mt-3">
+          <Row className="justify-content-center">
+            <Col md={9}>
+              <MyTitle />
+              <MySettings />
+            </Col>
+          </Row>
+        </Container>
+      </>
     )
   }
 }

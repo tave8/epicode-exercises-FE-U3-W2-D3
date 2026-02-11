@@ -5,18 +5,25 @@ import MyTitle from "./MyTitle"
 import MySettings from "./MySettings"
 import MyActions from "./MyActions"
 
+import { Helmet } from "react-helmet"
+
 class ProfileMain extends Component {
   render() {
     return (
-      <Container fluid className="mt-3">
-        <Row className="justify-content-center">
-          <Col md={9} lg={6}>
-            <MyTitle />
-            <MySettings />
-            <MyActions />
-          </Col>
-        </Row>
-      </Container>
+      <>
+        <Helmet>
+          <title>Profile</title>
+        </Helmet>
+        <Container fluid className="mt-3">
+          <Row className="justify-content-center">
+            <Col md={9} lg={6}>
+              <MyTitle />
+              <MySettings />
+              <MyActions />
+            </Col>
+          </Row>
+        </Container>
+      </>
     )
   }
 }

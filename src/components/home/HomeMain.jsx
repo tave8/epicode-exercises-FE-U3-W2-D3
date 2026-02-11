@@ -4,6 +4,9 @@ import MySlider from "./MySlider"
 import MySearchFilters from "./MySearchFilters"
 import MyAIFilmSuggestion from "./MyAIFilmSuggestion"
 
+import { Helmet } from "react-helmet"
+
+
 const filmInfos = [
   {
     title: "Trending Now",
@@ -26,6 +29,10 @@ class HomeMain extends Component {
   render() {
     return (
       <>
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
+
         <MySearchFilters />
         <MyAIFilmSuggestion filmInfos={filmInfos} />
         {/* sliders */}

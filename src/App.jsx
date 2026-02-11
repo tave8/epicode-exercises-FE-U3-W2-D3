@@ -20,6 +20,8 @@ import HomeMain from "./components/home/HomeMain"
 import ProfileMain from "./components/profile/ProfileMain"
 import SettingsMain from "./components/settings/SettingsMain"
 
+
+
 function App() {
   return (
     <BrowserRouter>

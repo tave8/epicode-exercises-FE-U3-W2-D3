@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 
 import MyNavSearchBar from "./MyNavSearchBar"
 
+
 const MyNav = (props) => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
