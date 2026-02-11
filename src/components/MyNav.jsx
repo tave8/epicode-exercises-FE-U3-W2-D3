@@ -25,11 +25,11 @@ class MyNav extends Component {
           <Navbar.Collapse id="navbarSupportedContent">
             {/* Left menu items */}
             <Nav className="me-auto mb-2 mb-lg-0">
-              <Nav.Item>
+              {/* <Nav.Item>
                 <Nav.Link href="./" className="text-white">
                   Home
                 </Nav.Link>
-              </Nav.Item>
+              </Nav.Item> */}
 
               <Link to="/tv-shows" className="nav-link text-white">
                 TV Shows

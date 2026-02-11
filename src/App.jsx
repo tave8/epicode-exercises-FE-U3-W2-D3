@@ -13,6 +13,7 @@ import MyNav from "./components/MyNav"
 import MyFooter from "./components/MyFooter"
 import TVShows from "./components/TVShows"
 import MovieDetails from "./components/MovieDetails"
+import NotFound from "./components/NotFound"
 
 // pages components
 import HomeMain from "./components/home/HomeMain"
@@ -32,6 +33,7 @@ function App() {
           <Route path="/settings" element={<SettingsMain />} />
           <Route path="/tv-shows" element={<TVShows />} />
           <Route path="/movie-details/:movieId" element={<MovieDetails />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <footer>
