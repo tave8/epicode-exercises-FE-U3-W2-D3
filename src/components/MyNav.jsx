@@ -11,9 +11,12 @@ class MyNav extends Component {
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
           {/* Logo */}
-          <Navbar.Brand href="./">
+          <Link to="/">
             <Image src="/img/netflix_logo.png" fluid style={{ maxWidth: "80px" }} />
-          </Navbar.Brand>
+          
+          </Link>
+          {/* <Navbar.Brand href="./">
+          </Navbar.Brand> */}
 
           {/* Hamburger */}
           <Navbar.Toggle aria-controls="navbarSupportedContent" className="btn-light" />
