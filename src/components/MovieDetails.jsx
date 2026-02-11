@@ -29,6 +29,7 @@ const MovieDetails = (props) => {
       .then((remoteResults) => {
         const [remoteMovie, remoteMovieComments] = remoteResults
         setMovie(remoteMovie)
+        console.log(remoteMovieComments)
         setMovieComments(remoteMovieComments)
         setIsLoading(false)
         console.log("done loading movie and comments")
@@ -45,7 +46,6 @@ const MovieDetails = (props) => {
     <Container>
       <Row className="justify-content-center">
         <Col xs={12} md={6} className="d-flex justify-content-center">
-
           {/* spinner */}
           {isLoading && (
             <div className="text-center mt-3">
@@ -55,14 +55,44 @@ const MovieDetails = (props) => {
 
           {/* movie */}
           {movie && (
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={movie.Poster} />
-              <Card.Body>
-                <Card.Title>{movie.Title}</Card.Title>
-                <Card.Text>{movie.Plot}</Card.Text>
-                {/* <Button variant="primary">Go somewhere</Button> */}
-              </Card.Body>
-            </Card>
+            <>
+              <Card style={{ width: "18rem" }}>
+                <Card.Img variant="top" src={movie.Poster} />
+                <Card.Body>
+                  <Card.Title>{movie.Title}</Card.Title>
+                  <Card.Text>
+                    <Row className="flex-column">
+                      <Col>
+                        <h4>Plot</h4>
+                        {movie.Plot}
+                      </Col>
+                      <Col className="mt-3">
+
+                        {/* there are comments */}
+                        {movieComments.length > 0 && (
+                          <>
+                            <h4>Comments</h4>
+                            <ul style={{listStyleType: "none", padding: "0"}}>
+                              {movieComments.map((movieComment) => {
+                                return <li>{movieComment.rate} | {movieComment.comment} - {movieComment.author}</li>
+                              })}
+                            </ul>
+                          </>
+                        )}
+
+                        {/* no comments */}
+                        {movieComments.length == 0 && (
+                          <Alert variant="info">
+                            <p>No comments for this film.</p>
+                          </Alert>
+                        )}
+                      </Col>
+                    </Row>
+                  </Card.Text>
+                  {/* <Button variant="primary">Go somewhere</Button> */}
+                </Card.Body>
+              </Card>
+            </>
           )}
         </Col>
       </Row>
