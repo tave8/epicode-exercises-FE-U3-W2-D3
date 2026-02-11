@@ -52,9 +52,7 @@ class MyNav extends Component {
             {/* Right options */}
             <ul className="d-flex justify-content-center align-items-center gap-4 m-0 p-0">
               <li>
-
                 <MyNavSearchBar />
-
               </li>
               <li className="text-white">KIDS</li>
               <li>
@@ -67,8 +65,14 @@ class MyNav extends Component {
                       <Image src="https://placedog.net/50/50" fluid style={{ maxWidth: "20px" }} roundedCircle />
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="dropdown-menu-end">
-                      <Dropdown.Item href="./profile.html">Profile</Dropdown.Item>
-                      <Dropdown.Item href="./settings.html">Settings</Dropdown.Item>
+                      {/* profile */}
+                      {/* <Dropdown.Item> */}
+                        <Link to="/profile">Profile</Link>
+                      {/* </Dropdown.Item> */}
+                      {/* settings */}
+                      {/* <Dropdown.Item> */}
+                        <Link to="/settings">Settings</Link>
+                      {/* </Dropdown.Item> */}
                     </Dropdown.Menu>
                   </Dropdown>
                 </div>

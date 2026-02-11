@@ -6,7 +6,7 @@ import "./assets/css/header.css"
 import "./assets/css/simple-slider.css"
 import "./assets/css/checkbox.css"
 
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 // base components
 import MyNav from "./components/MyNav"
@@ -19,7 +19,6 @@ import HomeMain from "./components/home/HomeMain"
 import ProfileMain from "./components/profile/ProfileMain"
 import SettingsMain from "./components/settings/SettingsMain"
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -27,16 +26,13 @@ function App() {
         <MyNav />
       </header>
       <main>
-        {/* <HomeMain /> */}
-        {/* <ProfileMain /> */}
-        {/* <SettingsMain /> */}
-
         <Routes>
           <Route path="/" element={<HomeMain />} />
+          <Route path="/profile" element={<ProfileMain />} />
+          <Route path="/settings" element={<SettingsMain />} />
           <Route path="/tv-shows" element={<TVShows />} />
           <Route path="/movie-details/:movieId" element={<MovieDetails />} />
         </Routes>
-
       </main>
       <footer>
         <MyFooter />
