@@ -25,6 +25,7 @@ class MyNav extends Component {
           <Navbar.Collapse id="navbarSupportedContent">
             {/* Left menu items */}
             <Nav className="me-auto mb-2 mb-lg-0">
+
               {/* <Nav.Item>
                 <Nav.Link href="./" className="text-white">
                   Home
@@ -70,11 +71,11 @@ class MyNav extends Component {
                     <Dropdown.Menu className="dropdown-menu-end">
                       {/* profile */}
                       {/* <Dropdown.Item> */}
-                        <Link to="/profile">Profile</Link>
+                        <Link to="/profile" className="dropdown-item">Profile</Link>
                       {/* </Dropdown.Item> */}
                       {/* settings */}
                       {/* <Dropdown.Item> */}
-                        <Link to="/settings">Settings</Link>
+                        <Link to="/settings" className="dropdown-item">Settings</Link>
                       {/* </Dropdown.Item> */}
                     </Dropdown.Menu>
                   </Dropdown>

@@ -4,17 +4,21 @@ import { Search, BellFill } from "react-bootstrap-icons"
 import { useNavigate, useLocation, useParams } from "react-router-dom"
 
 const MyNavSearchBar = (props) => {
+  const firstPlaceholder = "Cerca film"
+  const secondPlaceholder = "Cerca Serie TV..."
+
   // se l'utente è sulla pagina TVShows, il placeholder dovrà diventare: "Cerca Serie TV..."
-  const [placeholder, setPlaceholder] = useState("Cerca film")
+  const [placeholder, setPlaceholder] = useState(firstPlaceholder)
   const location = useLocation()
 
   useEffect(() => {
     const isPageTvShows = location.pathname == "/tv-shows"
     if (isPageTvShows) {
-      const otherPlaceholder = "Cerca Serie TV..."
-      setPlaceholder(otherPlaceholder)
+      setPlaceholder(secondPlaceholder)
+    } else {
+      setPlaceholder(firstPlaceholder)
     }
-  }, [])
+  }, [location.pathname])
 
   console.log(location)
 
