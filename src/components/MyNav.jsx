@@ -3,6 +3,8 @@ import { Container, Row, Col, Nav, Navbar, NavDropdown, Image, Dropdown } from "
 import { Search, BellFill } from "react-bootstrap-icons"
 import { Link } from "react-router-dom"
 
+import MyNavSearchBar from "./MyNavSearchBar"
+
 class MyNav extends Component {
   render() {
     return (
@@ -50,7 +52,9 @@ class MyNav extends Component {
             {/* Right options */}
             <ul className="d-flex justify-content-center align-items-center gap-4 m-0 p-0">
               <li>
-                <Search className="text-white" />
+
+                <MyNavSearchBar />
+
               </li>
               <li className="text-white">KIDS</li>
               <li>
