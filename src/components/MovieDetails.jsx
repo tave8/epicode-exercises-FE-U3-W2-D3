@@ -104,7 +104,7 @@ const MovieDetails = (props) => {
 
 const getRemoteMovieById = (componentInfo) => {
   return async (movieId) => {
-    const url = `http://www.omdbapi.com/?apikey=${OMDP_API_KEY}&i=${movieId}`
+    const url = `https://www.omdbapi.com/?apikey=${OMDP_API_KEY}&i=${movieId}`
     const config = {}
     const resp = await fetch(url, config)
     const filmData = await resp.json()
