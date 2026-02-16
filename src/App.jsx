@@ -42,7 +42,7 @@ function App() {
         <MyFooter />
       </footer>
     </BrowserRouter>
-  )
+  ) 
 }
 
 export default App
